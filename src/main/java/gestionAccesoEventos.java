@@ -1,6 +1,31 @@
 public class gestionAccesoEventos {
     public static void main(String[] args) {
-        ;
+        String[][] matriz = crearMatriz();
+        matriz[0] = new String[]{"Juan", "20", "VIP", "2", "False"};
+        matriz[1] = new String[]{"Ana", "17", "General", "1", "False"};
+        matriz[2] = new String[]{"Luis", "25", "General", "0", "False"};
+
+        verificarEdad(matriz, 0);
+        verificarEdad(matriz, 1);
+        verificarEdad(matriz, 2);
+
+        verificarBoleto(matriz, 0);
+        verificarBoleto(matriz, 1);
+        verificarBoleto(matriz, 2);
+
+        validarInvitados(matriz, 0);
+        validarInvitados(matriz, 1);
+        validarInvitados(matriz, 2);
+
+        aforoDisponible(matriz, "VIP");
+        aforoDisponible(matriz, "General");
+
+        ingresarPersona(matriz, "Juan");
+        permitirEntrada(matriz, "Juan");
+        permitirEntrada(matriz, "Ana");
+
+        removerPersona(matriz, "Juan");
+        permitirEntrada(matriz, "Juan");
     }
 
     public static String[][] crearMatriz() {
